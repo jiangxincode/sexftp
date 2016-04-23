@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.sexftp.core.bean.LanguageConf>
+  <defaultLang>zhcn</defaultLang>
+  <languageItem>
+    <key>Generate Sexftp Config File,Using Your Chosed Folders And Files,Main Option Start Here!</key>
+    <enus>Generate Sexftp Config File,Using Your Chosed Folders And Files,Main Option Start Here!</enus>
+    <zhcn>新建Sexftp上传单元，会使用使用你所选择的本地目录或文件，使用Sexftp从这里开始！</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Edit Sexftp Config</key>
+    <enus>Edit Sexftp Config</enus>
+    <zhcn>编辑该SexftpSexftp上传单元</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Edit Sexftp Config File</key>
+    <enus>Edit Sexftp Config File</enus>
+    <zhcn>编辑该SexftpSexftp上传单元</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Remove Sexftp Config</key>
+    <enus>Remove Sexftp Config</enus>
+    <zhcn>移除该SexftpSexftp上传单元</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Remove Sexftp Config File</key>
+    <enus>Remove Sexftp Config File</enus>
+    <zhcn>移除该SexftpSexftp上传单元</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Format(%s)</key>
+    <enus>Format(%s)</enus>
+    <zhcn>格式化(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Format Upload Datas,New Modify Checking Will Based On this Result!</key>
+    <enus>Format Upload Datas,New Modify Checking Will Based On this Result!</enus>
+    <zhcn>格式化上传数据，如果有新的修改检查将以此为基准！</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>After This Action,We&apos;ll Gevi You Which File Modified After Last Format or Upload Option,And Then You Can Chose Them To Upload!</key>
+    <enus>After This Action,We&apos;ll Gevi You Which File Modified After Last Format or Upload Option,And Then You Can Chose Them To Upload!</enus>
+    <zhcn>使用该操作后，我们将向你列出相对上次格式化或上传后新修改过的文件或目录，你可以只选择他们上传！</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Upload To Server(%s)</key>
+    <enus>Upload To Server(%s)</enus>
+    <zhcn>上传到服务器(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>After This Action,Upload Files You Chose To Ftp Server!</key>
+    <enus>After This Action,Upload Files You Chose To Ftp Server!</enus>
+    <zhcn>使用该操作后，你选中的目录及子目录或选中的文件将上传到服务器！</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Download From Server(%s)</key>
+    <enus>Download From Server(%s)</enus>
+    <zhcn>从服务器下载</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>After This Action,Download Files You Chose From Ftp Server!</key>
+    <enus>After This Action,Download Files You Chose From Ftp Server!</enus>
+    <zhcn>通过该操作，将下载你所选中的目录及子目录下的文件或你选中的文件。</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>View Or Edit ServerSide File(%s)</key>
+    <enus>View Or Edit ServerSide File(%s)</enus>
+    <zhcn>查看或编辑服务端文件(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>View Or Edit ServerSide File!</key>
+    <enus>View Or Edit ServerSide File!</enus>
+    <zhcn>查看或编辑服务端文件</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>View Or Edit LocalSide File(%s)</key>
+    <enus>View Or Edit LocalSide File(%s)</enus>
+    <zhcn>查看或编辑本地文件(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>View Or Edit LocalSide File!</key>
+    <enus>View Or Edit LocalSide File!</enus>
+    <zhcn>查看或编辑本地文件</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Disconnect All Connections(%s)</key>
+    <enus>Disconnect All Connections(%s)</enus>
+    <zhcn>断开所有连接(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Disconnect All Connections!</key>
+    <enus>Disconnect All Connections!</enus>
+    <zhcn>当你需要阻止服务端相关操作，或因网络问题过久阻塞服务端操作的话，该操作将会帮助你。</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Open Server Viewer(%s)</key>
+    <enus>Open And Location To Server Viewer(%s)</enus>
+    <zhcn>到 Sexftp服务端视图  浏览或操作(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Open Server Viewer!</key>
+    <enus>Open Server Viewer!</enus>
+    <zhcn>你可以打开服务端视图，浏览服务端文件及从服务端下载文件。</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Location To Local Viewer(%s)</key>
+    <enus>Location To Local Viewer(%s)</enus>
+    <zhcn>到 Sexftp本地视图  浏览或操作(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>View Or Upload Local New Modified Files(%s)</key>
+    <enus>View Or Upload Local New Modified Files(%s)</enus>
+    <zhcn>查看或上传本地新修改文件(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>View Or Upload Files Witch Different From Server(%s)</key>
+    <enus>View Or Upload Files Witch Different From Server(%s)</enus>
+    <zhcn>查看或上传与服务器不同的文件(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Format Local File Upload Point(%s)</key>
+    <enus>Format Local File Upload Point(%s)</enus>
+    <zhcn>格式化本地文件上传点(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Format Local File Upload Point,New Modify Checking Will Based On this Result!</key>
+    <enus>Format Local File Upload Point,New Modify Checking Will Based On this Result!</enus>
+    <zhcn>格式化本地文件上传点，新的修改检查将基于该结果！</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>This Operation Will Compare Data With Server,It&apos;s May Take a Long Time,Sure?&#xd;
+We Suggest You To Use &lt;View Or Upload Local New Modified Files&gt;,It&apos;s Only Compare With Last File Upload Point At Local.</key>
+    <enus>This Operation Will Compare Data With Server,It&apos;s May Take a Long Time,Sure?&#xd;
+We Suggest You To Use &lt;View Or Upload Local New Modified Files&gt;,It&apos;s Only Compare With Last File Upload Point At Local.</enus>
+    <zhcn>该操作将和服务器端比较数据，可能需要较长时间，确定继续吗？&#xd;
+我们建议你使用 &lt;查看或上传本地新修改文件&gt;,她将只和本地文件的上次文件上传点比较。
+	</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Chose Your Folder (%s)</key>
+    <enus>Chose Your Folder (%s)</enus>
+    <zhcn>选择你的目录 (%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Chose Your Folder</key>
+    <enus>Chose Your Folder</enus>
+    <zhcn>使用你的目录</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>No Different Or Modified Files With Server!</key>
+    <enus>No Different Or Modified Files With Server!</enus>
+    <zhcn>没有和服务器不同的或修改过的文件！</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>[%s] Not Exists On Server!</key>
+    <enus>[%s] Not Exists On Server!</enus>
+    <zhcn>服务器不存在 [%s]</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>New Sexftp Upload Unit</key>
+    <enus>New Sexftp Upload Unit</enus>
+    <zhcn>新建Sexftp上传单元</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Edit Sexftp Upload Unit</key>
+    <enus>Edit Sexftp Upload Unit</enus>
+    <zhcn>编辑Sexftp上传单元</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Remove Sexftp Upload Unit</key>
+    <enus>Remove Sexftp Upload Unit</enus>
+    <zhcn>删除Sexftp上传单元</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Upload Current Edit File [%s] To Server?</key>
+    <enus>Upload Current Edit File [%s] To Server?</enus>
+    <zhcn>上传当前编辑的文件 [%s] 到服务器?</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Config File Name Error!</key>
+    <enus>Config File Name Error!</enus>
+    <zhcn>配置文件名称错误！</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Refresh Samples Use [%s]?</key>
+    <enus>Refresh Samples Use [%s]?</enus>
+    <zhcn>使用 [%s] 编码来刷新采样数据？</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>[%s] Files Charset Encoding Changed Success!</key>
+    <enus>[%s] Files Charset Encoding Changed Success,Now Refresh To Check Encode!</enus>
+    <zhcn>共有 [%s] 个文件的编码转换成功,现在刷新，你可检查编码是否正常!</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>No Files To Change Encoding!</key>
+    <enus>No Files To Change Encoding!</enus>
+    <zhcn>没有要转码的文件</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Folder</key>
+    <enus>Folder</enus>
+    <zhcn>目录</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>File association</key>
+    <enus>File association</enus>
+    <zhcn>文件关联名</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>File Encoding</key>
+    <enus>File Encoding</enus>
+    <zhcn>文件编码</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>File New Encoding</key>
+    <enus>File New Encoding</enus>
+    <zhcn>文件新编码</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Description</key>
+    <enus>Description</enus>
+    <zhcn>描述</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Samples</key>
+    <enus>Samples</enus>
+    <zhcn>内容抽样(无乱码表示编码正常)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>ASCII Text File Do not Need Change Charset Encoding.</key>
+    <enus>ASCII Text File Do not Need Change Charset Encoding.</enus>
+    <zhcn>ASCII文本文件不需要作转码</zhcn>
+  </languageItem>
+  <languageItem>
+    <zhcn></zhcn>
+  </languageItem>
+  <languageItem>
+    <key>We Just Guess,You Must Check  Samples!</key>
+    <enus>We Just Guess The Encode,You Must Check  Samples!</enus>
+    <zhcn>我们只是猜测编码，你需要从抽样中检查看编码是否正常。</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Apply Changes(%s)</key>
+    <enus>Apply Changes(%s)</enus>
+    <zhcn>应用改变(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Apply Changes</key>
+    <enus>Apply Changes</enus>
+    <zhcn>应用改变</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>View Or Upload Files Witch Different From Server!</key>
+    <enus>View Or Upload Files Witch Different From Server!</enus>
+    <zhcn>查看或上传和服务器端不同的文件！</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Compare (%s)</key>
+    <enus>Compare (%s)</enus>
+    <zhcn>比较 (%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Compare</key>
+    <enus>Compare</enus>
+    <zhcn>比较</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Edit File!</key>
+    <enus>Edit File!</enus>
+    <zhcn>编辑文件！</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Refresh And Reload Sexftp Config Files(%s)</key>
+    <enus>Refresh And Reload Sexftp Config Files(%s)</enus>
+    <zhcn>刷新并重新加载所有Sexftp上传单元配置(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Compare With Server(%s)</key>
+    <enus>Compare With Server(%s)</enus>
+    <zhcn>与服务器端比较(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Nothing For Upload,You Can Try Thes Options Before as :&#xd;
+Prepare Modified Files  For Upload&#xd;
+Prepare All Files For Upload</key>
+    <enus>Nothing For Upload,You Can Try Thes Options Before as :&#xd;
+Expand The File Or Folder Of Current Upload Unit You Want Upload&#xd;
+View Or Upload Local New Modified Files&#xd;
+View Or Upload Files Witch Different From Server</enus>
+    <zhcn>没有什么可上传的，你可以尝试如下方式 :&#xd;
+展开你想上传的Sexftp上传单元下的文件名目录&#xd;
+查看或上传本地新修改文件&#xd;
+查看或上传与服务器不同的文件</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Change: [%s]</key>
+    <enus>Change: [%s]</enus>
+    <zhcn>改变: [%s]</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Compare With Local(%s)</key>
+    <enus>Compare With Local(%s)</enus>
+    <zhcn>和本地文件比较(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>After Format,New Modify Checking Will Based On this Result!Sure?</key>
+    <enus>After Format,New Modify Checking Will Based On this Result!Sure?</enus>
+    <zhcn>格式化后，新的本地文件修改检查将基于这个结果！确定吗？</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Upload To:[%s]</key>
+    <enus>Upload To:[%s]</enus>
+    <zhcn>上传到:[%s]</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Confirm To Upload These [%s] Files:</key>
+    <enus>Confirm To Upload These [%s] Files:</enus>
+    <zhcn>确认上传这 [%s] 个文件吗：</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>No Different Or Modified Files With The Status Of Last Format Or Upload!</key>
+    <enus>No Different Or Modified Files With The Status Of Last Format Or Upload!</enus>
+    <zhcn>相对于上次{上传}或{格式化文件上传点}没有找到有不同的或新修改的文件或目录</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Refresh And Reload All Sexftp Configs</key>
+    <enus>Refresh And Reload All Sexftp Configs</enus>
+    <zhcn>刷新然后重新加载所有Sexftp上传单元配置</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Refresh Files And Folders(%s)</key>
+    <enus>Refresh Files And Folders(%s)</enus>
+    <zhcn>刷新文件与目录(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Sure To Delete The Sexftp Config File [%s] ?</key>
+    <enus>Sure To Delete The Sexftp Config File [%s] ?</enus>
+    <zhcn>确定要删除该Sexftp上传单元配置[%s] 吗?</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Please Input Config File Name</key>
+    <enus>Please Input Config File Name</enus>
+    <zhcn>请输入配置文件的名称</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Sexftp Error</key>
+    <enus>Sexftp Error</enus>
+    <zhcn></zhcn>
+  </languageItem>
+  <languageItem>
+    <key>[%s] Not Exists!</key>
+    <enus>[%s] Not Exists!</enus>
+    <zhcn>[%s] 不存在!</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>[%s] Not Exists,&#xd;
+Create Folder Named [%s]?</key>
+    <enus>[%s] Not Exists,&#xd;
+Create Folder Named [%s]?</enus>
+    <zhcn>[%s] 不存在 ,&#xd;
+新建一个名为 [%s] 的文件夹吗?</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Server Type [%s] in [%s] Not Supported!&#xd;
+We Supported [%s]</key>
+    <enus>Server Type [%s] in [%s] Not Supported!&#xd;
+We Supported [%s]</enus>
+    <zhcn>服务器类型 [%s] 不支持，在文件 [%s] 里面!&#xd;
+我们仅支持 [%s]</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>The Result Will Show In [%s]</key>
+    <enus>The Result Will Show In [%s]</enus>
+    <zhcn>结果将显示在 [%s] 视图</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>[%s] File Total Size [%s] , More Than [%s], Can&apos;t Go Ahead!</key>
+    <enus>[%s] File Total Size [%s] , More Than [%s], Can&apos;t Go Ahead!</enus>
+    <zhcn>[%s] 文件共 [%s] ，超过了[%s]，不能继续操作。</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Location To File Or Folder In Sexftp Viewer&#xd;
+Full Path:Precise Location&#xd;
+File Name:Only Find In Expanded Tree Node</key>
+    <enus>Location To File Or Folder In Sexftp Viewer&#xd;
+Full Path:Precise Location&#xd;
+File Name:Only Find In Expanded Tree Node</enus>
+    <zhcn>定位到 Sexftp 视图中的文件或目录&#xd;
+全路径:精确定位&#xd;
+文件名:只在已展开的节点中查找</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Location To(%s)</key>
+    <enus>Location To(%s)</enus>
+    <zhcn>定位到(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Location To</key>
+    <enus>Location To</enus>
+    <zhcn></zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Input Config File Name</key>
+    <enus>Input Config File Name</enus>
+    <zhcn></zhcn>
+  </languageItem>
+  <languageItem>
+    <key>FTP Transfer Protocal</key>
+    <enus>FTP Transfer Protocal</enus>
+    <zhcn>FTP文件传输协议</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Implicit TLS/SSL FTP</key>
+    <enus>Implicit TLS/SSL FTP</enus>
+    <zhcn>通过隐式  TLS/SSL 的FTP</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Explicit TLS/SSL FTP</key>
+    <enus>Explicit TLS/SSL FTP</enus>
+    <zhcn>通过显式 TLS/SSL 的FTP</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>SSH File Transfer Protocal</key>
+    <enus>SSH File Transfer Protocal</enus>
+    <zhcn>SSH文件传输协议</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Local File Transfer Protocal</key>
+    <enus>Local File Transfer Protocal</enus>
+    <zhcn>本地文件传输协议</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Generate Sexftp Config File</key>
+    <enus>Generate Sexftp Config File</enus>
+    <zhcn>生成Sexftp配置文件</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Help You Generate Sexftp Config XML File.</key>
+    <enus>Help You Generate Sexftp Config XML File.</enus>
+    <zhcn>帮助你生成Sexftp的XML配置文件</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Generate Sexftp Upload Unit Config File</key>
+    <enus>Generate Sexftp Upload Unit Config File</enus>
+    <zhcn>生成Sexftp上传单元配置文件</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Help You Generate Sexftp Upload Unit Config File Based Xml.After Save The XML File,&#xd;
+The Sexftp Upload Unit Config Will Show In [%s] and [%s]</key>
+    <enus>Help You Generate Sexftp Upload Unit Config File Based Xml.After Save The XML File,&#xd;
+The Sexftp Upload Unit Config Will Show In [%s] and [%s]</enus>
+    <zhcn>帮助你生成Sexftp上传单元XML配置文件.保存该XML文件后,&#xd;
+该Sexftp上传单元配置将显示在  [%s] 和 [%s]</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Support [%s]</key>
+    <enus>Support [%s]</enus>
+    <zhcn>支持 [%s]</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Server Root Folder Path</key>
+    <enus>Server Root Folder Path</enus>
+    <zhcn>服务器根目录路径</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Exclude Path,? = any character,* = any string</key>
+    <enus>Exclude Path,? = any character,* = any string</enus>
+    <zhcn>排除路径匹配，? = 任意单个字符,* = 任意字符串</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Includes Path,? = any character,* = any string</key>
+    <enus>Includes Path,? = any character,* = any string</enus>
+    <zhcn>只允许包含路径匹配，? = 任意单个字符,* = 任意字符串</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Client Path Is Empty!</key>
+    <enus>Client Path Is Empty!</enus>
+    <zhcn>客户端路径是空的</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Client Root Folder Or File Path</key>
+    <enus>Client Root Folder Or File Path</enus>
+    <zhcn>客户端根目录或文件路径</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>We&apos;ll Generate Sexftp Upload Unit XML Config File .&#xd;
+You May Need Fulfill The XML Config File&#xd;
+After Save The XML File,&#xd;
+The Sexftp Upload Unit Config Will Show In &#xd;
+[%s] and [%s]&#xd;
+And Then You Can Use It.&#xd;
+If You Don&apos;t Save,The Sexftp Upload Unit Config File Will Be Deleted.</key>
+    <enus>We&apos;ll Generate Sexftp Upload Unit XML Config File .&#xd;
+You May Need Fulfill The XML Config File&#xd;
+After Save The XML File,&#xd;
+The Sexftp Upload Unit Config Will Show In &#xd;
+[%s] and [%s]&#xd;
+And Then You Can Use It.&#xd;
+If You Don&apos;t Save,The Sexftp Upload Unit Config File Will Be Deleted.</enus>
+    <zhcn>将生成Sexftp上传单元XML配置文件.&#xd;
+你可能需要完善该XML配置文件&#xd;
+保存该XML文件后,&#xd;
+该Sexftp上传单元配置将显示在&#xd;
+[%s] 和 [%s]&#xd;
+然后你就可以使用该上传单元了.&#xd;
+如果没有保存而关闭，该Sexftp上传单元配置文件将被删除。</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Include Path,? = any character,* = any string</key>
+    <enus>Include Path,? = any character,* = any string</enus>
+    <zhcn>只允许包含路径匹配，? = 任意单个字符,* = 任意字符串</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Config File Name</key>
+    <enus>Config File Name</enus>
+    <zhcn>配置文件名</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Server Host</key>
+    <enus>Server Host</enus>
+    <zhcn>服务器地址</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Server Port</key>
+    <enus>Server Port</enus>
+    <zhcn>服务器端口</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Server Type</key>
+    <enus>Server Type</enus>
+    <zhcn>服务器类型</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Login User</key>
+    <enus>Login User</enus>
+    <zhcn>登陆用户</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Login User Name</key>
+    <enus>Login User Name</enus>
+    <zhcn>登陆用户名</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Login Password</key>
+    <enus>Login Password</enus>
+    <zhcn>登陆密码</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Save Sexftp Upload Unit Config And Load In Sexftp Viewer(%s)</key>
+    <enus>Save Sexftp Upload Unit Config And Load In Sexftp Viewer(%s)</enus>
+    <zhcn>保存当前Sexftp上传单元配置同时加载到Sexftp视图中(%s)</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Client And Server Path Synchronize Correlated Relation</key>
+    <enus>Client And Server Path Synchronize Correlated Relation</enus>
+    <zhcn>客户端和服务器目录对应关系</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Copy</key>
+    <enus>Copy</enus>
+    <zhcn></zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Copy Qualified Name</key>
+    <enus>Copy Qualified Name</enus>
+    <zhcn></zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Copy Cient File/Folder Path(%s)</key>
+    <enus>Copy Cient File/Folder Path(%s)</enus>
+    <zhcn></zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Copy Server File/Folder Path(%s)</key>
+    <enus>Copy Server File/Folder Path(%s)</enus>
+    <zhcn></zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Open In Explorer</key>
+    <enus>Open In Explorer</enus>
+    <zhcn></zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Collapse All</key>
+    <enus>Collapse All</enus>
+    <zhcn></zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Expand All</key>
+    <enus>Expand All</enus>
+    <zhcn></zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Sexftp Question</key>
+    <enus>Sexftp Question</enus>
+    <zhcn></zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Sexftp Messsage</key>
+    <enus>Sexftp Messsage</enus>
+    <zhcn></zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Sexftp Charset Encoder</key>
+    <enus>Sexftp Charset Encoder</enus>
+    <zhcn></zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Server Operation Timeout,Retry [%s] Times,Retry Again?</key>
+    <enus>Server Operation Timeout,Retry [%s] Times,Retry Again?</enus>
+    <zhcn>服务器操作超时，已经重试了[%s]次，还要再重试吗？</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Import From</key>
+    <enus>Import From</enus>
+    <zhcn>从这里导入</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>From FileZilla</key>
+    <enus>From FileZilla</enus>
+    <zhcn>来自FileZilla</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>You Must Check Samples!</key>
+    <enus>You Must Check Samples!</enus>
+    <zhcn>你需要检查一下抽样数据！</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Need Check [%s]  Samples</key>
+    <enus>Need Check [%s]  Samples</enus>
+    <zhcn>需要检查 [%s]  的抽样数据是否编码正常</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Chose File Associations Which is Text File.</key>
+    <enus>Chose File Associations Which is Text File.</enus>
+    <zhcn>选择文本文件</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Chose File Associations Which is Text File.&#xd;
+Only Anyasis And Handle These File Associations</key>
+    <enus>Chose File Associations Which is Text File.&#xd;
+Only Anyasis And Handle These File Associations</enus>
+    <zhcn>选择文本文件&#xd;
+只分析和处理这些文件</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Text File Associations</key>
+    <enus>Text File Associations</enus>
+    <zhcn>可处理的文本文件</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Only Anyasis And Handle These File Associations&#xd;
+Match File Name:? = any character,* = any string</key>
+    <enus>Only Anyasis And Handle These File Associations&#xd;
+Match Ways:Match File Name,? = any character,* = any string</enus>
+    <zhcn>只分析和处理这些文件&#xd;
+匹配方式：匹配文件名，? = 任意字符,* = 任意字符串</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Other File Associations</key>
+    <enus>Other File Associations</enus>
+    <zhcn>其他文件类型</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Other Unknown Type File Associations Show You For reference&#xd;
+,If Need Anyasis And Handle These File Associations&#xd;
+Add Them To {Text File Associations}.</key>
+    <enus>Other Unknown Type File Associations Show You For reference&#xd;
+,If Need Anyasis And Handle These File Associations&#xd;
+Add Them To {Text File Associations}.</enus>
+    <zhcn>其他未知类型文件，这里仅展示出来供参考&#xd;
+,如果需要分析与处理这些文件&#xd;
+可把她们加到 {可处理的文本文件}之中.</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Confirm File Associations</key>
+    <enus>Confirm File Associations</enus>
+    <zhcn>确认分析与处理的文件</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Chose File Associations in [%s] Which is Text File.</key>
+    <enus>Chose File Associations in [%s] Which is Text File.</enus>
+    <zhcn>选择[%s]的文本文件。</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Only Anyasis And Handle These File Associations.&#xd;
+Match Ways:Match File Name,? = any character,* = any string.</key>
+    <enus>Only Anyasis And Handle These File Associations.&#xd;
+Match Ways:Match File Name,? = any character,* = any string.</enus>
+    <zhcn>只分析和处理这些文件。&#xd;
+匹配方式:匹配文件名,? = 任意字符,* = 任意字符串。</zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Cann&apos;t Find [%s] In [%s]!</key>
+    <enus>Cann&apos;t Find [%s] In [%s]!</enus>
+    <zhcn></zhcn>
+  </languageItem>
+  <languageItem>
+    <key>Work In Sexftp World</key>
+    <enus>Work In Sexftp World</enus>
+    <zhcn></zhcn>
+  </languageItem>
+</org.sexftp.core.bean.LanguageConf>
