@@ -103,13 +103,15 @@ public class SexftpServerView extends SexftpMainView {
 
 					File f = new File(tmpeditpath);
 					if (f.length() > 10000000L) {
-						throw new BizException(String.format("[%s] 文件共 %s ，超过了 %s，不能继续操作。", new Object[] { f.getName(),
-								FileUtils.byteCountToDisplaySize(f.length()), FileUtils.byteCountToDisplaySize(10000000L) }));
+						throw new BizException(String.format("[%s] 文件共 %s ，超过了 %s，不能继续操作。",
+								new Object[] { f.getName(), FileUtils.byteCountToDisplaySize(f.length()),
+										FileUtils.byteCountToDisplaySize(10000000L) }));
 					}
 					f = new File(client);
 					if (f.length() > 10000000L) {
-						throw new BizException(String.format("[%s] 文件共 %s ，超过了 %s，不能继续操作。", new Object[] { f.getName(),
-								FileUtils.byteCountToDisplaySize(f.length()), FileUtils.byteCountToDisplaySize(10000000L) }));
+						throw new BizException(String.format("[%s] 文件共 %s ，超过了 %s，不能继续操作。",
+								new Object[] { f.getName(), FileUtils.byteCountToDisplaySize(f.length()),
+										FileUtils.byteCountToDisplaySize(10000000L) }));
 					}
 					Charset cs = Cpdetector.richencode(new FileInputStream(tmpeditpath));
 					Charset cc = Cpdetector.richencode(new FileInputStream(client));
@@ -631,9 +633,12 @@ public class SexftpServerView extends SexftpMainView {
 
 									if (this.okCancel) {
 										SexftpServerView.this.console("Operation Canceled!");
-										SexftpServerView.this.console(String.format("Last Downloaded %s Of %s .",
-												new Object[] { FileUtils.byteCountToDisplaySize(uploadedSize),
-														FileUtils.byteCountToDisplaySize(totalSize) }));
+										SexftpServerView.this
+												.console(
+														String.format("Last Downloaded %s Of %s .",
+																new Object[] {
+																		FileUtils.byteCountToDisplaySize(uploadedSize),
+																		FileUtils.byteCountToDisplaySize(totalSize) }));
 										if (totalSize > uploadedSize) {
 											SexftpServerView.this
 													.console(String.format("Warning:Incomplete Download %s %s of %s!",

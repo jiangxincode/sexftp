@@ -19,7 +19,6 @@ import org.eclipse.ui.IWorkbenchWindowActionDelegate;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.sexftp.core.exceptions.AbortException;
-import org.sexftp.core.license.LicenseUtils;
 import sexftp.uils.LogUtil;
 import sexftp.views.SexftpMainView;
 
@@ -60,9 +59,6 @@ public class SexftpMainAction implements IWorkbenchWindowActionDelegate, IObject
 			} catch (Exception localException2) {
 			}
 		}
-
-		LicenseUtils.checkUpdateAndLicense(
-				String.format("Submain[%s][%s]", new Object[] { action != null ? action.getText() : "", this.path }));
 	}
 
 	public void dispose() {

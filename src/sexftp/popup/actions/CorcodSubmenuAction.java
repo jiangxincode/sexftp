@@ -18,7 +18,6 @@ import org.eclipse.ui.IWorkbenchPartSite;
 import org.eclipse.ui.part.FileEditorInput;
 import org.sexftp.core.ftp.bean.FtpUploadConf;
 import org.sexftp.core.ftp.bean.FtpUploadPro;
-import org.sexftp.core.license.LicenseUtils;
 import sexftp.mainbar.actions.SexftpMainAction;
 import sexftp.uils.LogUtil;
 import sexftp.uils.PluginUtil;
@@ -89,7 +88,6 @@ public class CorcodSubmenuAction extends SexftpMainAction {
 
 	public void run(IAction action) {
 		try {
-			LicenseUtils.checkUpdateAndLicense("Submenu Corcod");
 			PluginUtil.getActivePage().showView("sexftp.views.SexftpEncodView");
 			SexftpEncodView c = (SexftpEncodView) PluginUtil.getActivePage().findView("sexftp.views.SexftpEncodView");
 

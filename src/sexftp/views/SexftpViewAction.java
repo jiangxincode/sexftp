@@ -2,7 +2,6 @@ package sexftp.views;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.swt.widgets.Event;
-import org.sexftp.core.license.LicenseUtils;
 
 import sexftp.uils.LangUtil;
 import sexftp.uils.LogUtil;
@@ -17,7 +16,6 @@ public class SexftpViewAction extends Action {
 	}
 
 	public void runWithEvent(Event event) {
-		LicenseUtils.checkUpdateAndLicense(getText());
 		try {
 			super.runWithEvent(event);
 		} catch (Throwable e) {
