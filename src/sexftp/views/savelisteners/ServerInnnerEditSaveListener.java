@@ -1,6 +1,8 @@
 package sexftp.views.savelisteners;
 
 import java.io.File;
+
+import org.apache.commons.io.FileUtils;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -93,7 +95,7 @@ public class ServerInnnerEditSaveListener implements IDoSaveListener {
 
 							public void printStreamString(FtpUploadConf ftpUploadConf, long uploadedSize,
 									long totalSize, String info) {
-								monitor.subTask("uploaded:" + StringUtil.getHumanSize(uploadedSize));
+								monitor.subTask("uploaded:" + FileUtils.byteCountToDisplaySize(uploadedSize));
 							}
 
 							public void printSimple(String info) {

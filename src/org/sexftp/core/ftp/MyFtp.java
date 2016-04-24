@@ -1,7 +1,6 @@
 package org.sexftp.core.ftp;
 
 import java.io.IOException;
-import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.net.SocketException;
 import java.util.ArrayList;

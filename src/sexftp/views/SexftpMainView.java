@@ -205,7 +205,7 @@ public class SexftpMainView extends AbstractSexftpView {
 				"</includes><!-- " + LangUtil.langText("Include Path,? = any character,* = any string") + " -->");
 		bean2xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!-- you may need use <![CDATA[your string]]> for special char  -->\r\n"
 				+ bean2xml;
-		FileUtil.writeByte2File(confFile.getAbsolutePath(), StringUtil.getBytes(bean2xml, "utf-8"));
+		FileUtil.writeByte2File(confFile.getAbsolutePath(), bean2xml.getBytes("utf-8"));
 
 		IEditorRegistry editorRegistry = PlatformUI.getWorkbench().getEditorRegistry();
 		String id2 = editorRegistry.findEditor("sexftp.editors.XMLEditor").getId();

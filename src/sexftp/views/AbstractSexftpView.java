@@ -69,6 +69,7 @@ import sexftp.uils.Console;
 import sexftp.uils.LangUtil;
 import sexftp.uils.LogUtil;
 import sexftp.uils.PluginUtil;
+import sexftp.views.AbstractSexftpView.TreeObject;
 
 public class AbstractSexftpView extends ViewPart implements Consoleable, SrcViewable {
 	public static final String ID = "sexftp.views.MainView";
@@ -161,36 +162,35 @@ public class AbstractSexftpView extends ViewPart implements Consoleable, SrcView
 		}
 	}
 
-	public class TreeParent extends AbstractSexftpView.TreeObject {
+	public class TreeParent extends TreeObject {
 		private Object o;
-		private ArrayList<AbstractSexftpView.TreeObject> children;
+		private ArrayList<TreeObject> children;
 
 		public TreeParent(String name, Object o) {
 			super(name, o);
 			this.o = o;
-			this.children = new ArrayList();
+			this.children = new ArrayList<TreeObject>();
 		}
 
-		public void addChild(AbstractSexftpView.TreeObject child) {
+		public void addChild(TreeObject child) {
 			this.children.add(child);
 			child.setParent(this);
 		}
 
-		public void removeChild(AbstractSexftpView.TreeObject child) {
+		public void removeChild(TreeObject child) {
 			this.children.remove(child);
 			child.setParent(null);
 		}
 
 		public void removeAll() {
-			for (AbstractSexftpView.TreeObject child : this.children) {
+			for (TreeObject child : this.children) {
 				child.setParent(null);
 			}
 			this.children.clear();
 		}
 
-		public AbstractSexftpView.TreeObject[] getChildren() {
-			return (AbstractSexftpView.TreeObject[]) this.children
-					.toArray(new AbstractSexftpView.TreeObject[this.children.size()]);
+		public TreeObject[] getChildren() {
+			return (TreeObject[]) this.children.toArray(new TreeObject[this.children.size()]);
 		}
 
 		public boolean hasChildren() {
@@ -217,35 +217,35 @@ public class AbstractSexftpView extends ViewPart implements Consoleable, SrcView
 		}
 
 		public Object[] getElements(Object parent) {
-			if (parent.equals(AbstractSexftpView.this.getViewSite())) {
-				if (AbstractSexftpView.this.invisibleRoot == null)
+			if (parent.equals(getViewSite())) {
+				if (invisibleRoot == null)
 					initialize();
-				return getChildren(AbstractSexftpView.this.invisibleRoot);
+				return getChildren(invisibleRoot);
 			}
 			return getChildren(parent);
 		}
 
 		public Object getParent(Object child) {
-			if ((child instanceof AbstractSexftpView.TreeObject)) {
-				return ((AbstractSexftpView.TreeObject) child).getParent();
+			if ((child instanceof TreeObject)) {
+				return ((TreeObject) child).getParent();
 			}
 			return null;
 		}
 
 		public Object[] getChildren(Object parent) {
 			if ((parent instanceof AbstractSexftpView.TreeParent)) {
-				AbstractSexftpView.TreeObject[] children = ((AbstractSexftpView.TreeParent) parent).getChildren();
-				List<AbstractSexftpView.TreeObject> childList = new ArrayList();
-				AbstractSexftpView.TreeObject[] arrayOfTreeObject1;
+				TreeObject[] children = ((TreeParent) parent).getChildren();
+				List<TreeObject> childList = new ArrayList<TreeObject>();
+				TreeObject[] arrayOfTreeObject1;
 				int j = (arrayOfTreeObject1 = children).length;
 				for (int i = 0; i < j; i++) {
-					AbstractSexftpView.TreeObject c = arrayOfTreeObject1[i];
+					TreeObject c = arrayOfTreeObject1[i];
 
 					if (c.isVisible()) {
 						childList.add(c);
 					}
 				}
-				return childList.toArray(new AbstractSexftpView.TreeObject[0]);
+				return childList.toArray(new TreeObject[0]);
 			}
 			return new Object[0];
 		}
@@ -273,7 +273,7 @@ public class AbstractSexftpView extends ViewPart implements Consoleable, SrcView
 		}
 	}
 
-	protected Map<String, String> customizedImgMap = new Hashtable();
+	protected Map<String, String> customizedImgMap = new Hashtable<String, String>();
 
 	class ViewLabelProvider extends LabelProvider implements IFontProvider, IColorProvider {
 		ViewLabelProvider() {
@@ -301,17 +301,17 @@ public class AbstractSexftpView extends ViewPart implements Consoleable, SrcView
 			if ((AbstractSexftpView.this instanceof SexftpServerView)) {
 				sexFtpIcon = "javaassist_co.gif";
 			}
-			if ((obj instanceof AbstractSexftpView.TreeParent)) {
+			if ((obj instanceof TreeParent)) {
 				imageKey = "IMG_OBJ_FOLDER";
 				if ((AbstractSexftpView.this instanceof SexftpServerView)) {
 					sexFtpIcon = "cprj_obj.gif";
 				}
 			}
 
-			if ((obj instanceof AbstractSexftpView.TreeObject)) {
-				AbstractSexftpView.TreeObject treeObj = (AbstractSexftpView.TreeObject) obj;
+			if ((obj instanceof TreeObject)) {
+				TreeObject treeObj = (TreeObject) obj;
 				if ((treeObj.getO() == null) && (treeObj.getName().equals("Sexftp Start"))) {
-					sexFtpIcon = "Twitter bird.ico";
+					sexFtpIcon = "Twitter_bird.ico";
 				} else if ((treeObj.getO() instanceof FtpConf)) {
 					sexFtpIcon = "Duckling.ico";
 				} else if ((treeObj.getO() instanceof FtpUploadConf)) {
@@ -327,7 +327,7 @@ public class AbstractSexftpView extends ViewPart implements Consoleable, SrcView
 					sexFtpIcon = null;
 				} else if ((treeObj.getO() instanceof String)) {
 					if (treeObj.getO().toString().startsWith("Projects")) {
-						sexFtpIcon = "Follow me.ico";
+						sexFtpIcon = "Follow_me.ico";
 					}
 				} else if ((treeObj.getO() instanceof FtpUploadPro)) {
 					String clientPath = ((FtpUploadPro) treeObj.getO()).getFtpUploadConf().getClientPath();
@@ -339,7 +339,7 @@ public class AbstractSexftpView extends ViewPart implements Consoleable, SrcView
 
 			if (sexFtpIcon != null) {
 
-				return AbstractUIPlugin.imageDescriptorFromPlugin("sexftp", "/icons/" + sexFtpIcon).createImage();
+				return AbstractUIPlugin.imageDescriptorFromPlugin("sexftp", "icons/" + sexFtpIcon).createImage();
 			}
 			return PlatformUI.getWorkbench().getSharedImages().getImage(imageKey);
 		}
@@ -673,7 +673,7 @@ public class AbstractSexftpView extends ViewPart implements Consoleable, SrcView
 		this.actionDirectSLocal.setText("Location To Local Viewer(&L)");
 		this.actionDirectSLocal.setToolTipText("Location To Local Viewer!");
 		this.actionDirectSLocal
-				.setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("sexftp", "/icons/Follow me.ico"));
+				.setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("sexftp", "/icons/Follow_me.ico"));
 
 		this.actionRefreshSexftp = new SexftpViewAction() {
 			public void run() {
@@ -1229,7 +1229,7 @@ public class AbstractSexftpView extends ViewPart implements Consoleable, SrcView
 
 	protected void initConsole() {
 		if (this.console == null) {
-			this.console = Console.createConsole("SexFtpConsole", "Twitter bird.ico");
+			this.console = Console.createConsole("SexFtpConsole", "Twitter_bird.ico");
 
 			try {
 				this.console.console("Welcome to Sexftp - "

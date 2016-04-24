@@ -47,7 +47,7 @@ public class UploadConfirmDialog extends TitleAreaDialog implements IFtpStreamMo
 	protected Control createDialogArea(Composite parent) {
 		Control c = super.createDialogArea(parent);
 		createContentPane(parent);
-		setTitleImage(AbstractUIPlugin.imageDescriptorFromPlugin("sexftp", "/icons/Twitter bird.ico").createImage());
+		setTitleImage(AbstractUIPlugin.imageDescriptorFromPlugin("sexftp", "/icons/Twitter_bird.ico").createImage());
 		createLoginControls();
 		return c;
 	}

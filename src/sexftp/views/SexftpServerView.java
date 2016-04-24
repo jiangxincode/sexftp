@@ -9,6 +9,8 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 import java.util.Vector;
+
+import org.apache.commons.io.FileUtils;
 import org.desy.common.util.DateTimeUtils;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.IPath;
@@ -102,19 +104,19 @@ public class SexftpServerView extends SexftpMainView {
 					File f = new File(tmpeditpath);
 					if (f.length() > 10000000L) {
 						throw new BizException(String.format("[%s] 文件共 %s ，超过了 %s，不能继续操作。", new Object[] { f.getName(),
-								StringUtil.getHumanSize(f.length()), StringUtil.getHumanSize(10000000L) }));
+								FileUtils.byteCountToDisplaySize(f.length()), FileUtils.byteCountToDisplaySize(10000000L) }));
 					}
 					f = new File(client);
 					if (f.length() > 10000000L) {
 						throw new BizException(String.format("[%s] 文件共 %s ，超过了 %s，不能继续操作。", new Object[] { f.getName(),
-								StringUtil.getHumanSize(f.length()), StringUtil.getHumanSize(10000000L) }));
+								FileUtils.byteCountToDisplaySize(f.length()), FileUtils.byteCountToDisplaySize(10000000L) }));
 					}
 					Charset cs = Cpdetector.richencode(new FileInputStream(tmpeditpath));
 					Charset cc = Cpdetector.richencode(new FileInputStream(client));
 
 					String stext = FileUtil.getTextFromFile(tmpeditpath, cs != null ? cs.toString() : "gbk");
 					String ctext = FileUtil.getTextFromFile(client, cc != null ? cc.toString() : "gbk");
-					FileUtil.deleteFolder(new File(tmpeditpath).getParentFile());
+					FileUtils.deleteDirectory(new File(tmpeditpath).getParentFile());
 					PluginUtil.openCompareEditor(page, ctext, stext, String.format("%s - %s", new Object[] {
 							new File(client).getAbsolutePath(), dpro.getFtpUploadConf().getServerPath() }));
 				}
@@ -173,7 +175,7 @@ public class SexftpServerView extends SexftpMainView {
 			String serverPath = thisServer;
 			String teeNodeName = String.format("%s ( %s %s )",
 					new Object[] { ftpDownloadPro.getFtpfile().getName(),
-							StringUtil.getHumanSize(ftpDownloadPro.getFtpfile().getSize()),
+							FileUtils.byteCountToDisplaySize(ftpDownloadPro.getFtpfile().getSize()),
 							DateTimeUtils.format(ftpDownloadPro.getFtpfile().getTimeStamp().getTime()) });
 			if (serverPath.endsWith("/")) {
 				AbstractSexftpView.TreeObject exists = existFtpDownloadPro(parent, thisServer);
@@ -602,10 +604,10 @@ public class SexftpServerView extends SexftpMainView {
 									}
 
 									monitor.subTask(String.format("(%s in %s) %s \r\n getting %s",
-											new Object[] { StringUtil.getHumanSize(uploadedSize),
-													StringUtil.getHumanSize(totalSize),
+											new Object[] { FileUtils.byteCountToDisplaySize(uploadedSize),
+													FileUtils.byteCountToDisplaySize(totalSize),
 													(float) this.speed > 1.0E-4F
-															? StringUtil.getHumanSize(this.speed) + "/s" : "",
+															? FileUtils.byteCountToDisplaySize(this.speed) + "/s" : "",
 											this.curftpUploadConf.getServerPath() }));
 
 									this.okCancel = monitor.isCanceled();
@@ -622,7 +624,7 @@ public class SexftpServerView extends SexftpMainView {
 										if (this.smallLeftCompleted) {
 											SexftpServerView.this.console("Canncled But Go Ahead Little Left Files! "
 													+ fdpro.getFtpfile().getName() + " "
-													+ StringUtil.getHumanSize(uploadedSize));
+													+ FileUtils.byteCountToDisplaySize(uploadedSize));
 											this.okCancel = false;
 										}
 									}
@@ -630,14 +632,14 @@ public class SexftpServerView extends SexftpMainView {
 									if (this.okCancel) {
 										SexftpServerView.this.console("Operation Canceled!");
 										SexftpServerView.this.console(String.format("Last Downloaded %s Of %s .",
-												new Object[] { StringUtil.getHumanSize(uploadedSize),
-														StringUtil.getHumanSize(totalSize) }));
+												new Object[] { FileUtils.byteCountToDisplaySize(uploadedSize),
+														FileUtils.byteCountToDisplaySize(totalSize) }));
 										if (totalSize > uploadedSize) {
 											SexftpServerView.this
 													.console(String.format("Warning:Incomplete Download %s %s of %s!",
 															new Object[] { this.curftpUploadConf.getServerPath(),
-																	StringUtil.getHumanSize(uploadedSize),
-																	StringUtil.getHumanSize(totalSize) }));
+																	FileUtils.byteCountToDisplaySize(uploadedSize),
+																	FileUtils.byteCountToDisplaySize(totalSize) }));
 										}
 										list = null;
 										throw new AbortException();

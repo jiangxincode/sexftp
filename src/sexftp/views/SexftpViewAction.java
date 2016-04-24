@@ -3,6 +3,7 @@ package sexftp.views;
 import org.eclipse.jface.action.Action;
 import org.eclipse.swt.widgets.Event;
 import org.sexftp.core.license.LicenseUtils;
+
 import sexftp.uils.LangUtil;
 import sexftp.uils.LogUtil;
 

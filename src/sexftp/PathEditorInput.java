@@ -1,7 +1,5 @@
 package sexftp;
 
-import java.io.File;
-import java.io.PrintStream;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.IMemento;

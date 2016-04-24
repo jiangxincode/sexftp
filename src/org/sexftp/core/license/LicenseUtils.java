@@ -1,18 +1,19 @@
 package org.sexftp.core.license;
 
-import com.thoughtworks.xstream.XStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.lang.reflect.Method;
-import java.net.URL;
 import java.util.Arrays;
 import java.util.Map;
+
 import org.eclipse.core.runtime.Platform;
-import org.osgi.framework.Bundle;
 import org.sexftp.core.exceptions.BizException;
 import org.sexftp.core.utils.ByteUtils;
 import org.sexftp.core.utils.FileUtil;
+
+import com.thoughtworks.xstream.XStream;
+
 import sexftp.uils.LogUtil;
 
 public class LicenseUtils {

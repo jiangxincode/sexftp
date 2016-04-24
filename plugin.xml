@@ -10,7 +10,7 @@
       </category>
       <view
             name="Sexftp Local"
-            icon="icons/Twitter bird.ico"
+            icon="icons/Twitter_bird.ico"
             category="sexftp"
             class="sexftp.views.SexftpLocalView"
             id="sexftp.views.MainView">
@@ -132,7 +132,7 @@
          point="org.eclipse.ui.perspectives">
          <perspective
         name="Sexftp"
-        icon="icons/Twitter bird.ico"
+        icon="icons/Twitter_bird.ico"
         class="sexftp.perspective.SexftpPerspective"
         id="sexftp.perspective.SexftpPerspective">
   		</perspective>
@@ -146,7 +146,7 @@
          <menu
                id="sexftp.mainpop.menu"
                label="Sexftp World"
-               icon="icons/Twitter bird.ico"
+               icon="icons/Twitter_bird.ico"
                path="additions">
             <separator
                   name="group1">
@@ -154,7 +154,7 @@
          </menu>
          <action
                class="sexftp.popup.actions.SexftpSubmenuAction"
-               icon="icons/Twitter bird.ico"
+               icon="icons/Twitter_bird.ico"
                enablesFor="1"
                id="sexftp.popMainAction"
                label="Work In Sexftp World"
@@ -171,7 +171,7 @@
          </action>
          <action
                class="sexftp.popup.actions.SexftpSubmenuAction"
-               icon="icons/Follow me.ico"
+               icon="icons/Follow_me.ico"
                enablesFor="1"
                id="sexftp.popMainAction"
                label="Location To Local Viewer(&amp;L)"
@@ -310,7 +310,7 @@
          </menu>
          <action
                class="sexftp.mainbar.actions.SexftpMainAction"
-               icon="icons/Twitter bird.ico"
+               icon="icons/Twitter_bird.ico"
                id="sexftp.mainbar.actions.SexftpMainAction"
                label="&amp;Work In Sexftp World"
                menubarPath="sexftpMainMenu/sexftpMainGroup"

@@ -44,7 +44,7 @@ public class NewFtpConfDialog extends TitleAreaDialog {
 
 		super.createDialogArea(parent);
 
-		setTitleImage(AbstractUIPlugin.imageDescriptorFromPlugin("sexftp", "/icons/Twitter bird.ico").createImage());
+		setTitleImage(AbstractUIPlugin.imageDescriptorFromPlugin("sexftp", "/icons/Twitter_bird.ico").createImage());
 
 		setTitle(LangUtil.langText("Generate Sexftp Upload Unit Config File"));
 

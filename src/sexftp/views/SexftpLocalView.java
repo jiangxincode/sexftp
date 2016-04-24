@@ -12,6 +12,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.commons.io.FileUtils;
 import org.desy.common.util.DateTimeUtils;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
@@ -798,7 +800,7 @@ public class SexftpLocalView extends SexftpMainView {
 		}
 		try {
 			long size = file.length();
-			return String.format("%s ( %s %s )", new Object[] { file.getName(), StringUtil.getHumanSize(size),
+			return String.format("%s ( %s %s )", new Object[] { file.getName(), FileUtils.byteCountToDisplaySize(size),
 					DateTimeUtils.format(new Date(file.lastModified())) });
 		} catch (Exception e) {
 			throw new SRuntimeException(e);
@@ -919,10 +921,10 @@ public class SexftpLocalView extends SexftpMainView {
 								}
 
 								monitor.subTask(String.format("(%s in %s) %s \r\n uploading %s%s",
-										new Object[] { StringUtil.getHumanSize(uploadedSize),
-												StringUtil.getHumanSize(totalSize),
+										new Object[] { FileUtils.byteCountToDisplaySize(uploadedSize),
+												FileUtils.byteCountToDisplaySize(totalSize),
 												(float) this.speed > 1.0E-4F
-														? StringUtil.getHumanSize(this.speed) + "/s" : "",
+														? FileUtils.byteCountToDisplaySize(this.speed) + "/s" : "",
 										this.curftpUploadConf.getServerPath(),
 										new File(this.curftpUploadConf.getClientPath()).getName() }));
 
@@ -940,17 +942,20 @@ public class SexftpLocalView extends SexftpMainView {
 
 								if (this.okCancel) {
 									SexftpLocalView.this.console("Operation Canceled!");
-									SexftpLocalView.this.console(String.format("Last Uploaded %s Of %s .",
-											new Object[] { StringUtil.getHumanSize(uploadedSize),
-													StringUtil.getHumanSize(totalSize) }));
+									SexftpLocalView.this
+											.console(
+													String.format("Last Uploaded %s Of %s .",
+															new Object[] {
+																	FileUtils.byteCountToDisplaySize(uploadedSize),
+																	FileUtils.byteCountToDisplaySize(totalSize) }));
 									if (totalSize > uploadedSize) {
 										SexftpLocalView.this
 												.console(String.format("Warning:Incomplete Upload %s%s %s of %s!",
 														new Object[] { this.curftpUploadConf.getServerPath(),
 																new File(this.curftpUploadConf.getClientPath())
 																		.getName(),
-														StringUtil.getHumanSize(uploadedSize),
-														StringUtil.getHumanSize(totalSize) }));
+														FileUtils.byteCountToDisplaySize(uploadedSize),
+														FileUtils.byteCountToDisplaySize(totalSize) }));
 									}
 									throw new AbortException();
 								}

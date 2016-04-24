@@ -1,15 +1,15 @@
 package sexftp.uils;
 
 import java.io.IOException;
-import java.io.PrintStream;
 import java.io.PrintWriter;
+
 import org.apache.commons.net.PrintCommandListener;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
-import org.eclipse.core.runtime.ILog;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.ui.console.MessageConsoleStream;
 import org.sexftp.core.utils.StringUtil;
+
 import sexftp.Activator;
 
 public class LogUtil {

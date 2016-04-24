@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.security.MessageDigest;
+
+import org.apache.commons.io.FileUtils;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.sexftp.core.utils.StringUtil;
 
@@ -49,8 +51,9 @@ public class FileMd5 {
 					if (total > 20000000L) {
 						dilled += length;
 
-						monitor.subTask(String.format("(%s in %s) \r\nAnalyzing Content Of %s", new Object[] {
-								StringUtil.getHumanSize(dilled), StringUtil.getHumanSize(total), filename }));
+						monitor.subTask(String.format("(%s in %s) \r\nAnalyzing Content Of %s",
+								new Object[] { FileUtils.byteCountToDisplaySize(dilled),
+										FileUtils.byteCountToDisplaySize(total), filename }));
 					}
 				}
 			}

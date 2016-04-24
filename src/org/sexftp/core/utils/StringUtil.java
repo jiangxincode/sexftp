@@ -1,35 +1,17 @@
 package org.sexftp.core.utils;
 
-import com.thoughtworks.xstream.XStream;
 import java.io.File;
-import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
-import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.thoughtworks.xstream.XStream;
+
 public class StringUtil {
-	public static String getHumanSize(long size) {
-		float s = 0.0F;
-		String u = "";
-		if (size > 1048576L) {
-			s = (float) size / 1024.0F / 1024.0F;
-			u = "MB";
-		} else if (size > 1024L) {
-			s = (float) size / 1024.0F;
-			u = "KB";
-		} else {
-			s = (float) size;
-			u = "Bytes";
-		}
-		return String.format("%.2f %s", new Object[] { Float.valueOf(s), u });
-	}
 
 	public static String iso88591(String str, String encode) {
 		try {
@@ -42,14 +24,6 @@ public class StringUtil {
 	public static String bakFromiso88591(String str, String encode) {
 		try {
 			return new String(str.getBytes("iso-8859-1"), encode);
-		} catch (UnsupportedEncodingException e) {
-			throw new RuntimeException(e);
-		}
-	}
-
-	public static byte[] getBytes(String str, String encode) {
-		try {
-			return str.getBytes(encode);
 		} catch (UnsupportedEncodingException e) {
 			throw new RuntimeException(e);
 		}
@@ -86,7 +60,7 @@ public class StringUtil {
 	public static String[] split(String str, String findstr) {
 		int indexOf = str.indexOf(findstr);
 		int lastIndex = 0;
-		List<String> lst = new ArrayList();
+		List<String> lst = new ArrayList<String>();
 		for (int i = 0; (i < 5000) && (indexOf >= 0); i++) {
 			String sp = str.substring(lastIndex, indexOf);
 			lst.add(sp);
@@ -184,14 +158,6 @@ public class StringUtil {
 			return str.substring(0, fstind) + "..." + str.substring(lstind);
 		}
 		return str;
-	}
-
-	public static void main(String[] args) throws Exception {
-		java.util.Set<Map.Entry<Object, Object>> entrySet = System.getProperties().entrySet();
-		for (Map.Entry<Object, Object> entry : entrySet) {
-			System.out.println(entry.getKey() + ":" + entry.getValue());
-		}
-		System.out.println(InetAddress.getLocalHost().toString());
 	}
 
 	static XStream xStream = new XStream();

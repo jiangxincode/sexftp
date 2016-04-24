@@ -755,7 +755,7 @@ public class AbstractSexftpEncodView extends ViewPart implements SrcViewable {
 	public void console(final String str) {
 		Display.getDefault().asyncExec(new Runnable() {
 			public void run() {
-				Console.createConsole("SexFtpConsole", "Twitter bird.ico").console(str);
+				Console.createConsole("SexFtpConsole", "Twitter_bird.ico").console(str);
 			}
 		});
 	}

@@ -10,6 +10,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+
+import org.apache.commons.io.FileUtils;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.sexftp.core.exceptions.AbortException;
 import org.sexftp.core.exceptions.BizException;
@@ -18,9 +20,9 @@ public class FileUtil {
 	public static String getTextFromFile(String filePath, String encode) {
 		File f = new File(filePath);
 		if (f.length() > 10000000L) {
-			throw new BizException(
-					String.format("[%s] File Total Size [%s] , More Than [%s], Can't Go Ahead!", new Object[] {
-							filePath, StringUtil.getHumanSize(f.length()), StringUtil.getHumanSize(10000000L) }));
+			throw new BizException(String.format("[%s] File Total Size [%s] , More Than [%s], Can't Go Ahead!",
+					new Object[] { filePath, FileUtils.byteCountToDisplaySize(f.length()),
+							FileUtils.byteCountToDisplaySize(10000000L) }));
 		}
 		InputStream ins = null;
 		try {
@@ -111,21 +113,6 @@ public class FileUtil {
 		// 2 48 48 finally
 		// 50 54 57 java/lang/Exception
 		// 61 65 68 java/lang/Exception
-	}
-
-	public static void deleteFolder(File folder) {
-		if (folder.isFile()) {
-			folder.delete();
-		} else {
-			File[] arrayOfFile;
-			int j = (arrayOfFile = folder.listFiles()).length;
-			for (int i = 0; i < j; i++) {
-				File subfile = arrayOfFile[i];
-
-				deleteFolder(subfile);
-			}
-			folder.delete();
-		}
 	}
 
 	/* Error */
