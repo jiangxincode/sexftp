@@ -69,7 +69,6 @@ import sexftp.uils.Console;
 import sexftp.uils.LangUtil;
 import sexftp.uils.LogUtil;
 import sexftp.uils.PluginUtil;
-import sexftp.views.AbstractSexftpView.TreeObject;
 
 public class AbstractSexftpView extends ViewPart implements Consoleable, SrcViewable {
 	public static final String ID = "sexftp.views.MainView";
@@ -129,11 +128,11 @@ public class AbstractSexftpView extends ViewPart implements Consoleable, SrcView
 			return this.name;
 		}
 
-		public void setParent(AbstractSexftpView.TreeParent parent) {
+		public void setParent(TreeParent parent) {
 			this.parent = parent;
 		}
 
-		public AbstractSexftpView.TreeParent getParent() {
+		public TreeParent getParent() {
 			return this.parent;
 		}
 
@@ -351,18 +350,16 @@ public class AbstractSexftpView extends ViewPart implements Consoleable, SrcView
 
 		public int compare(Viewer viewer, Object e1, Object e2) {
 			int c = 0;
-			c = (e2 instanceof AbstractSexftpView.TreeParent) ? c + 1 : c - 1;
-			c = (e1 instanceof AbstractSexftpView.TreeParent) ? c - 1 : c + 1;
+			c = (e2 instanceof TreeParent) ? c + 1 : c - 1;
+			c = (e1 instanceof TreeParent) ? c - 1 : c + 1;
 			if (c != 0)
 				return c;
-			if (((e1 instanceof AbstractSexftpView.TreeParent))
-					&& ((((AbstractSexftpView.TreeParent) e1).getO() instanceof String))
-					&& (((AbstractSexftpView.TreeParent) e1).getO().toString().startsWith("Projects"))) {
+			if (((e1 instanceof TreeParent)) && ((((TreeParent) e1).getO() instanceof String))
+					&& (((TreeParent) e1).getO().toString().startsWith("Projects"))) {
 				return -1;
 			}
-			if (((e2 instanceof AbstractSexftpView.TreeParent))
-					&& ((((AbstractSexftpView.TreeParent) e2).getO() instanceof String))
-					&& (((AbstractSexftpView.TreeParent) e2).getO().toString().startsWith("Projects"))) {
+			if (((e2 instanceof TreeParent)) && ((((TreeParent) e2).getO() instanceof String))
+					&& (((TreeParent) e2).getO().toString().startsWith("Projects"))) {
 				return 1;
 			}
 
@@ -1036,7 +1033,7 @@ public class AbstractSexftpView extends ViewPart implements Consoleable, SrcView
 		Status s = new Status(4, "sexftp", e.getMessage(), e) {
 			public IStatus[] getChildren() {
 				String[] es = StringUtil.readExceptionDetailInfo(e).split("\n");
-				List<IStatus> st = new ArrayList();
+				List<IStatus> st = new ArrayList<IStatus>();
 				String[] arrayOfString1;
 				int j = (arrayOfString1 = es).length;
 				for (int i = 0; i < j; i++) {

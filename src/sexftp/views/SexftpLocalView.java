@@ -17,23 +17,17 @@ import org.apache.commons.io.FileUtils;
 import org.desy.common.util.DateTimeUtils;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
-import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
-import org.eclipse.core.runtime.content.IContentType;
 import org.eclipse.core.runtime.jobs.Job;
-import org.eclipse.jface.action.Action;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.TreeExpansionEvent;
 import org.eclipse.jface.viewers.TreePath;
 import org.eclipse.jface.viewers.TreeSelection;
-import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPage;
-import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.ide.IDE;
 import org.eclipse.ui.part.FileEditorInput;
@@ -50,14 +44,11 @@ import org.sexftp.core.utils.FileUtil;
 import org.sexftp.core.utils.SearchCallback;
 import org.sexftp.core.utils.StringUtil;
 import org.sexftp.core.utils.TreeViewUtil;
-import org.sexftp.core.utils.TreeViewUtil.ThisYourFind;
 import sexftp.SexftpJob;
 import sexftp.SexftpRun;
-import sexftp.SrcViewable;
 import sexftp.editors.inner.SfTextEditor;
 import sexftp.editors.viewlis.IDoSaveListener;
 import sexftp.uils.PluginUtil;
-import sexftp.uils.PluginUtil.RunAsDisplayThread;
 
 public class SexftpLocalView extends SexftpMainView {
 	protected void actionPrepare() {
@@ -71,7 +62,7 @@ public class SexftpLocalView extends SexftpMainView {
 
 		doAfterSelectAndAddChildUploadPro(new DoAfterSelectAndAddChildUploadPro() {
 			public void doafter(Object[] selectOs, IProgressMonitor monitor) throws Exception {
-				SexftpLocalView.this.innerPrepareUpload_actionPerformed(selectOs, ftpconfs, selectFtpUploadConfNodes);
+				innerPrepareUpload_actionPerformed(selectOs, ftpconfs, selectFtpUploadConfNodes);
 			}
 		});
 	}
@@ -114,8 +105,8 @@ public class SexftpLocalView extends SexftpMainView {
 
 				Map<String, String> lastModMap = FtpUtil
 						.readLastModMap(SexftpLocalView.workspacePath + ".work/" + ftpconf.getName());
-				final List<FtpUploadPro> difList = new ArrayList();
-				final List<FtpUploadPro> notExistList = new ArrayList();
+				final List<FtpUploadPro> difList = new ArrayList<FtpUploadPro>();
+				final List<FtpUploadPro> notExistList = new ArrayList<FtpUploadPro>();
 				Object[] arrayOfObject1;
 				int j = (arrayOfObject1 = os).length;
 				for (int i = 0; i < j; i++) {
